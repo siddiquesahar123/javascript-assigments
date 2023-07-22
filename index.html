@@ -1,106 +1,104 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./assests/js/css/style.css">
+     <link rel="stylesheet" href="./assests/css/style.css">
+   
+    <!-- <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body> -->
-    <!-- Q.1 -->
-    <!-- <a href="#" onclick="box()"> Click Me</a> -->
-    <!-- Q.2 -->
-    <!-- <div id="image-container">
-        <img class="image" src="./assests/images/photo-1.avif" alt="photo-1" onclick="showAlt('photo-1')" width="200">
-        <img class="image" src="./assests/images/photo-2.avif" alt="photo-2" onclick="showAlt('photo-2')" width="200">
-        <img class="image" src="./assests/images/photo-3.avif" alt="photo-3" onclick="showAlt('photo-3')" width="200" >
-    </div> -->
-<!-- Q.3 -->
-<!-- <table id="table-student">
+<body>
+
+    1. Create a signup form and display form data in your web
+page on submission.
+
+
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form>
+                <div class="input-group">
+                    <div class="input-field" id="nameField">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Name">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="email" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fa-solid fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <p>Lost password <a href="#">Click here! </a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="button" id="signupBtn">Sign up</button>
+                    <button type="button" id="signinBtn" class="disable">Sign in</button>
+                </div>
+            </form>
+        </div>
+    </div>-->
+   
+
+<!-- 2. Suppose in your webpage there is content area in which
+you have entered your item details, but user can only see
+some details on first look. When user clicks on “Read
+more” button, full detail of that particular item will be
+displayed. -->
+
+
+<!-- <h1>Item Details</h1>
+<p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae aperiam debitis repellendus aliquam deleniti, quas nisi maiores earum asperiores dolorum placeat eligendi. Ab provident, ea suscipit hic quod quo aspernatur amet odit, necessitatibus, dignissimos quis odio exercitationem iure recusandae tenetur! <span class="dots"> ...</span><span class="moreText"> Veritatis sed facilis vitae illo adipisci, consequuntur maiores tempora voluptatibus atque, facere, mollitia voluptatum aperiam amet ab incidunt similique expedita? Sit est molestiae nesciunt velit aliquam voluptates ab laudantium mollitia, voluptatem tempore aliquid iusto expedita? Aliquid delectus officia quam esse, nostrum soluta numquam molestias voluptate consequatur eligendi temporibus voluptatem velit mollitia veritatis, iste nisi tempora odio quae non maxime unde?</span></p>
+<button class="read-more-btn">Read More</button> -->
+
+<!-- 3. In previous assignment you have created a tabular data
+using javascript. Let’s modify that. Create a form which
+takes student’s details and show each student detail in
+table. Each row of table must contain a delete button and
+an edit button. On click on delete button entire row should
+be deleted. On click on edit button, a hidden form will
+appear with the values of that row. -->
+
+<!-- 3. In previous assignment you have created a tabular data
+using javascript. Let’s modify that. Create a form which
+takes student’s details and show each student detail in
+table. Each row of table must contain a delete button and
+an edit button. On click on delete button entire row should
+be deleted. On click on edit button, a hidden form will
+appear with the values of that row. -->
+
+
+<!-- <div class="container">
+
+<h1>Student Details</h1>
+<form id="studentForm">
+  <label for="name">Name:</label>
+  <input type="text" id="name" required>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" required>
+
+  <label for="email">E-mail:</label>
+  <input type="email" id="email" required>
+
+  <button type="submit">Add Student</button>
+</form>
+
+<table id="studentTable">
+  <thead>
     <tr>
-    <th>Id</th>
-    <th>Name</th>
-    <th>Age</th>
-    <th>Action</th>
-</tr>
-<tr>
-    <td>0</td>
-    <td>Sahar</td>
-    <td>10</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>1</td>
-    <td>Zainab</td>
-    <td>50</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>Rumaisa</td>
-    <td>20</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>3</td>
-    <td>Barira</td>
-    <td>22</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>4</td>
-    <td>Saad</td>
-    <td>25</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>5</td>
-    <td>Walid</td>
-    <td>27</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>6</td>
-    <td>Sidrah</td>
-    <td>28</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>7</td>
-    <td>Huzifah</td>
-    <td>29</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>8</td>
-    <td>Osama</td>
-    <td>18</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>9</td>
-    <td>Waqas</td>
-    <td>30</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-<tr>
-    <td>10</td>
-    <td>Rimshah</td>
-    <td>30</td>
-    <td><button class="btn" onclick="deleteRow(this)">Delete </button></td>
-</tr>
-</table> -->
+      <th>Name</th>
+      <th>Age</th>
+      <th>E-mail</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+</div>
 
-<!-- Q.4
-<img id = "img1" onmouseover="setNewImage()" onmouseout="setOldImage()" src="./assests/images/photo-1.avif" alt="photo-1" width="300"> -->
-       <!--Q.5  -->
-<!-- 
-       <div class="wrapper">
-        <span class="minus">-</span>
-        <span class="num">01</span>
-        <span class="plus">+</span>
-       </div> -->
-
-       <!-- <script src="./assests/js/app.js"></script> 
+  <script src="./assests/js/app.js"></script>
 </body>
-</html> -->
+</html>  -->
