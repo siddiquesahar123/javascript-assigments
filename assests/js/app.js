@@ -1,168 +1,199 @@
-// 1. Write a function that displays current date & time in your
-// browser.
-// function date() {
-//     let now = new Date();
-//     alert(now);
+// 1.// Write a custom function power ( a, b ), to calculate the value of
+// // a raised to b.
+// function power(a, b){
+//     return Math.pow(a, b);
 // }
-// date();
+// let raised = power(4, 3);
+// console.log("The power of a is "+ raised);
 
-// 2. Write a function that takes first & last name and then it
-// greets the user using his full name.
-// function greets () {
-//     let first = "Sahar";
-//     let last = "Aziz";
-//     alert(first + " " + last);
+// 2.Any year is entered through the keyboard. Write a function to
+// determine whether the year is a leap year or not.
+// Leap years ..., 2012, 2016, 2020, ...
+
+// function leapyear(year) {
+//    return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 // }
-// greets();
+//  let year = parseInt(prompt("Enter the leap year"));
+//  let  isLeapYear = leapyear(year);
+//  if ( isLeapYear) {
+//     console.log(year + " is a leap year ");
+//  }
+//  else {
+//     console.log(year + " is not a leap year")}
 
-// 3. Write a function that adds two numbers (input by user)
-// and returns the sum of two numbers.
+// 3.If the lengths of the sides of a triangle are denoted by a, b, and
+// c, then area of triangle is given by
+// area = S(S − a)(S − b)(S − c)
+// where, S = ( a + b + c ) / 2
+// Calculate area of triangle using 2 functions
 
-// function addNumbers () {
-//   let num1 = parseInt(prompt("Enter the first number:"));
-//   let num2 = parseInt(prompt("Enter the second number:"));
-//   let sum = num1 + num2;
-//   return sum;
+// function where(a, b, c){
+//     return ( a + b + c ) / 2
 // }
-// let result = addNumbers();
-// console.log("The sum is " + result);
+// function calculateTriangle(a, b, c){
+//     let s = where(a, b, c);
+//     let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+//     return area;
+// }
+// let sideA = 6;
+// let sideB = 8;
+// let sideC = 9;
+// let result = calculateTriangle(sideA, sideB, sideC);
+// console.log("The area of triangle is " + result);
 
-// 4. Calculator:
-// Write a function that takes three arguments num1, num2
-// & operator & compute the desired operation. Return and
-// show the desired result in your browser.
+// 4. Write a function that receives marks received by a student in 3
+// subjects and returns the average and percentage of these
+// marks. there should be 3 functions one is the mainFunction
+// and other are for average and percentage. Call those functions
+// from mainFunction and display result in mainFunction.
 
-// function calc(num1,opr,num2) {
-//     if(opr === "+"){
-//        return num1 + num2;
+// function averageStudent(subject1, subject2, subject3) {
+//     return (subject1 + subject2 + subject3) / 3;
+// }
+// function calculatePercentage (totalMarks, obtainedMarks) {
+//    return (obtainedMarks / totalMarks) * 100
+// }
+// function overAll (subject1, subject2, subject3) {
+//     let average = averageStudent(subject1, subject2, subject3)
+//     let percentage = calculatePercentage(100, subject1 + subject2 + subject3)
+//     console.log("Average Students: " + average.toFixed(2) );
+//     console.log("Percentage: " + percentage.toFixed(2) + " %");
+// }
+// overAll(80, 70, 90);
+
+// 5.You have learned the function indexOf. Code your own custom
+// function that will perform the same functionality. You can code
+// for single character as of now.
+
+// function customIndexOf(string, searchChar){
+//     let index = 0;
+//     while(index < string.length){
+//         if (string[index] === searchChar) {
+//             return index;
+            
+//         }
+//         index++
 //     }
-//     else if(opr === "-") {
-//         return num1 - num2;
+//     return -1;
+// }
+// let str = "Hello Sahar";
+// let char = "o"
+// let result = customIndexOf(str, char);
+// console.log("Index of ' " + char + " ' in the string is " + result);
+
+// 6.Write a function to delete all vowels from a sentence. Assume that the sentence is not more than 25 characters long.
+
+// function deleteCharacter(sentence) {
+//     let vowels =["a", "e", "i", "o", "u"];
+//     let result = '';
+//     let i = 0;
+//     while (i < sentence.length) {
+//         if(!vowels.includes(sentence[i].toLowerCase())){
+//             result += sentence[i]
+//         }
+//         i++
 //     }
-//     else if(opr === "*") {
-//         return num1 * num2;
-//     }
-//     else if(opr === "/") {
-//         return num1 / num2;
-//     }
-//     else if(opr === "%") {
-//         return num1 % num2;
-//     }
-//     else{
-//        return "Incorrect operator!";
+//     return result;
+// }
+// let sentence = "Hello world!";
+// let result = deleteCharacter(sentence);
+// document.write(result);
+
+// 7.Write a function with switch statement to count the number of
+// occurrences of any two vowels in succession in a line of text.
+// For example, in the sentence
+// “Pleases read this application and give me gratuity”
+// Such occurrences are ea, ea, ui.
+
+// function character (text){
+//     let count = 0;
+//     let vowels =["a", "e", "i", "o", "u"];
+//     for (let i = 0; i < text.length -1; i++){
+//         let currentChar = text[i].toLowerCase();
+//         let nowChar = text[i + 1].toLowerCase();
+    
+//     switch (currentChar) {
+//         case 'a':
+//         if (vowels.includes(nowChar)) {
+//             count ++;
+//         }
+//         break;
+//         case 'e':
+//             if (vowels.includes(nowChar)) {
+//                 count ++;
+//             }
+//             break;
+//             case 'i':
+//                 if (vowels.includes(nowChar)) {
+//                     count ++;
+//                 }
+//                 break;
+//                 case 'o':
+//                     if (vowels.includes(nowChar)) {
+//                         count ++;
+//                     }
+//                     break;
+//                     case 'u':
+//                         if (vowels.includes(nowChar)) {
+//                             count ++;
+//                         }
+//                         break;
+//                         default:
+//                         break;
 //     }
 // }
-// let result = calc(4, "+" ,2);
-// let result1 = calc(26, "/", 4);
-// let result2 = calc(2, "$" ,5);
+//     return count;
+// }
+// let sentence = "Pleases read this application and give me gratuity"; 
+// let result = character(sentence);
 // console.log(result);
-// console.log(result1);
-// console.log(result2);
 
-// 5. Write a function that squares its argument.
 
-// function squares(number){
-//     return number * number;
-// }
-// let num = 4;
-// let result = squares(num);
-// console.log("The square of " + num + " is " + result + ".");
+// 8.The distance between two cities (in km.) is input through the
+// keyboard. Write four functions to convert and print this
+// distance in meters, feet, inches and centimeters.
 
-// 6. Write a function that computes factorial of a number.
+// function convertToMeters(distanceInKm){
+//     return distanceInKm* 1000;
+// }
+// function convertToFeet(distanceInKm){
+//     return distanceInKm * 3280.84;
+// }
+// function convertToInches (distanceInKm) {
+//     return distanceInKm * 39370.1;
+// }
+// function convertToCentimeters (distanceInKm) {
+//     return distanceInKm * 100000;
+// }
+// function print(distanceInKm){
+//     let distanceToMeters = convertToMeters(distanceInKm);
+//     let distanceToFeet = convertToFeet(distanceInKm);
+//     let distanceToInches = convertToInches(distanceInKm);
+//     let distanceToCentimeters = convertToCentimeters(distanceInKm);
+//     console.log("distance in meters " + distanceToMeters);
+//     console.log("distance in feet " + distanceToFeet);
+//     console.log("distance in inches " + distanceToInches);
+//     console.log("distance in centimeters " + distanceToCentimeters);
+// }
+// let distanceKm = parseInt(prompt("Enter the distance between two cities in km:"));
+// print(distanceInKm);
 
-// function factorial(n){
-// let answer = 1
-//    if (n == 0 || n == 1) {
-//    return answer;
-//    }
-// //    num * factorial(num - 1);
-// else if(n > 1){
-//     for(var i = n; i >= 1; i--){
-//       answer = answer * i;
-//     }
-//     return answer;
-// }
-// else {
-//     return "Number has to be positive"
-// }
-// }
-// let n = 5;
-// answer = factorial(n);
-// console.log("The fractional of " + n + " is " + answer);
-   
-// 7. Write a function that take start and end number as inputs
-// & display counting in your browser
+// 9.Write a program to calculate overtime pay of employees.
+// Overtime is paid at the rate of Rs. 12.00 per hour for every hour
+// worked above 40 hours. Assume that employees do not work
+// for fractional part of an hour.
 
-// function count(start,end){
-//     if (start <= end) {
-//         for (let i = start; i <= end; i++){
-//             document.write(i + "<br>");
-//         }
-//     }
-// else {
-//     for (let j = start; j <= end; j++) {
-//         document.write(j + "<br>");
-//     }
+// function calculateOvertimePay (hoursWork){
+//     let overtimeRate = 12.00;
+//     let regularHours = 40;
+//     let overtimeHours = Math.max(hoursWork - regularHours , 0);
+//     let overtimePay = regularHours * overtimeRate;
+//     return overtimePay;
 // }
-// }
-// let start = 1;
-// let end = 10;
-// count(start,end);
+// let hours = parseInt(prompt("Enter the overtime hours:"));
+// let result = calculateOvertimePay(hours);
+// document.write("Overtime Pay is " + result.toFixed(2));
+
+
   
-// 9. Write a function that calculates the area of a rectangle.
-// A = width * height
-// Pass width and height in following manner:
-// i. Arguments as value
-// ii. Arguments as variables
-
-// function calculatesAreaRectangle(width,height){
-//     let a = width * height;
-//     return a;
-// }
-// let a1 = calculatesAreaRectangle(5, 10);
-// document.write("The calculate rectangle area is " + a1);
-
-// 12. Write a JavaScript function that accepts a string as a
-// parameter and find the longest word within the string.
-// EXAMPLE STRING : 'Web Development Tutorial'
-// EXPECTED OUTPUT : 'Development
   
-//  function findLongestWords(str) {
-//     let word = str.split(' ');
-//     let longestWords = ' ';
-//     for (i = 0; i < word.length; i++) {
-//         if (word[1].length > longestWords.length) {
-//             longestWords = word[i]
-//         }
-//     }
-//     return longestWords;
-// } 
-// let str = "Web Development Tutorial";
-// let longestWords = findLongestWords(str);
-// document.write(longestWords); 
-
-//14. Create 2 functions that calculate properties of a circle, using
-// the definitions here.
-// Create a function called calcCircumference:
-// • Pass the radius to the function.
-// • Calculate the circumference based on the radius, and output
-// "The circumference is NN".
-// Create a function called calcArea:
-// • Pass the radius to the function.
-// • Calculate the area based on the radius, and output "The area
-// is NN".
-// Circumference of circle = 2πr
-// Area of circle = πr2
-
-// function calcCircumference(radius){
-//     let circumference = 2 * Math.PI * radius;
-//     console.log("The circumference is " + circumference);
-// }
-
-// function calcArea (radius) {
-//     let area = Math.PI * Math.pow(radius, 2);
-//     console.log("The area is " + area)
-// }
-// let radius = 5;
-// calcCircumference(radius);
-// calcArea(radius);
